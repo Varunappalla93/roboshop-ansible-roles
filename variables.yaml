@@ -1,0 +1,10 @@
+MONGODB_HOST: mongodb.vandevops.online # submit your host
+REDIS_HOST: redis.vandevops.online
+MYSQL_HOST: mysql.vandevops.online
+RABBITMQ_HOST: rabbitmq.vandevops.online
+CATALOGUE_HOST: catalogue.vandevops.online
+USER_HOST: user.vandevops.online
+CART_HOST: cart.vandevops.online
+SHIPPING_HOST: shipping.vandevops.online
+PAYMENT_HOST: payment.vandevops.online
+DISPATCH_HOST: dispatch.vandevops.online
