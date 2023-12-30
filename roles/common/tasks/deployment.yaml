@@ -49,3 +49,8 @@
   ansible.builtin.service:
     name: "{{component}}"
     state: restarted
+
+
+
+#  ansible-playbook -t deployment -e component=catalogue main.yaml
+
