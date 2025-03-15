@@ -1,3 +1,10 @@
 MONGODB_HOST: mongodb.appalla.shop
 REDIS_HOST: redis.appalla.shop
 CATALOGUE_HOST: catalogue.appalla.shop
+MYSQL_HOST: mysql.appalla.shop
+RABBITMQ_HOST: rabbitmq.appalla.shop
+USER_HOST: user.appalla.shop
+CART_HOST: cart.appalla.shop
+SHIPPING_HOST: shipping.appalla.shop
+PAYMENT_HOST: payment.appalla.shop
+DISPATCH_HOST: dispatch.appalla.shop
