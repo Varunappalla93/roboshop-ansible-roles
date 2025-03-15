@@ -1,1 +1,2 @@
 MONGODB_HOST: mongodb.appalla.shop
+REDIS_HOST: redis.appalla.shop
