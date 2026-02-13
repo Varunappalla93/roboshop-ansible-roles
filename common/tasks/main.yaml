@@ -1,4 +1,0 @@
-# Day 27
-- name: test call
-  ansible.builtin.debug:
-    msg: "Hello I am configuring {{ component }}"
