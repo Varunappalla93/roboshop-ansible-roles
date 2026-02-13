@@ -19,4 +19,5 @@
   # /etc/ansible/ansible.cfg
 
 
-  # ansible-playbook main.yaml  - to run this file, executes from roles-demo-main.yaml file
+  # ansible-playbook main.yaml  - to run this file, 
+  # this executes from roles-demo-tasks-main.yaml file
