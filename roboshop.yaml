@@ -6,3 +6,8 @@
   roles:
     - "{{ component }}"
 
+# ansible-playbook -e component=mongodb roboshop.yaml ->
+# {{ component }} value is taken from inventory.ini file based on the command line arg.
+# and also it executes tasks from roles-mongodb-tasks-main.yaml file.
+# and also takes related files from roles-mongodb-files-mongo.repo file.
+# also take username, password and other related {{ HOST }} names directory-> group_vars and file-> all.yaml file.
