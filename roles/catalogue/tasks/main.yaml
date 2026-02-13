@@ -5,7 +5,6 @@
       name: common
       tasks_from: app-setup.yaml
 
-  
   - name: app-setup
     ansible.builtin.import_role:
       name: common
@@ -30,7 +29,7 @@
 
   - name: check products loaded or not
     ansible.builtin.command: mongosh --host "{{ MONGODB_HOST }}" --quiet  --eval 'db.getMongo().getDBNames().indexOf("catalogue")'
-      register: catalogue_output
+    register: catalogue_output
 
   - name: print the output
     ansible.builtin.debug:
