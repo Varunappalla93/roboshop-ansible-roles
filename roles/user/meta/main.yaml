@@ -1,0 +1,6 @@
+# Day 27
+
+# user is dependent on common role
+
+dependencies:
+  - role: common
