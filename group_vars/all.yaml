@@ -1,5 +1,5 @@
 # Day 27
-# to take username, password, hosts from group_vars and all.yaml file instead of taking from inventory.ini file.
+# to take username, password, hosts from group_vars->all.yaml file instead of taking from inventory.ini file.
 
 ansible_user: ec2-user
 ansible_password: DevOps321
