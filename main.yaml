@@ -1,6 +1,6 @@
 # Day 27
 
-# Ansible roles - Proper directory structure with seven main directories, creating , managing and reusing playbooks
+# Ansible roles -> Proper directory structure with seven main directories, creating , managing and reusing playbooks
 # playbooks to break into multiple components such as tasks, handlers, vars, meta , templatees, files etc.
 
 # By default ansible loads main.yaml in these directories.
@@ -11,3 +11,9 @@
   roles:
     - demo
   
+
+  # ansible configuration checking preference
+  # ANSIBLE_CONFIG
+  # pwd ansible.cfg
+  # user home directory ansible.cfg
+  # /etc/ansible/ansible.cfg
