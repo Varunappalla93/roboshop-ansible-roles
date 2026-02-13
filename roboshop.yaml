@@ -6,8 +6,18 @@
   roles:
     - "{{ component }}"
 
+# eg:
 # ansible-playbook -e component=mongodb roboshop.yaml ->
-# {{ component }} value is taken from inventory.ini file based on the command line arg.
-# and also it executes tasks from roles-mongodb-tasks-main.yaml file.
-# and also takes related files from roles-mongodb-files-mongo.repo file.
-# also take username, password and other related {{ HOST }} names directory-> group_vars and file-> all.yaml file.
+# {{ component }} value is taken from inventory.ini file based on the command line arg,
+# and also it executes tasks from roles-mongodb-tasks-main.yaml file,
+# and also takes related files from roles-mongodb-files-mongo.repo file,
+# also take username, password and other related {{ HOST }} names from directory named group_vars and file name all.yaml file.
+
+
+# eg:
+# ansible-playbook -e component=catalogue roboshop.yaml ->
+# {{ component }} value is taken from inventory.ini file based on the command line arg,
+# and also it executes tasks from roles-catalogue-meta-main.yaml file and check for dependencies, and hence
+# now it goes to common-tasks-main.yaml file and executes it,
+# now it goes to roles-catalogue-tasks-main.yaml file and checks for import_role and executes common-tasks-app-setup.yaml as given,
+# also take username, password and other related {{ HOST }} names from directory named group_vars and file name all.yaml file.
