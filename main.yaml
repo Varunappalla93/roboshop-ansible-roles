@@ -17,3 +17,6 @@
   # pwd ansible.cfg
   # user home directory ansible.cfg
   # /etc/ansible/ansible.cfg
+
+
+  # ansible-playbook main.yaml  - to run this file, executes from roles-demo-main.yaml file
