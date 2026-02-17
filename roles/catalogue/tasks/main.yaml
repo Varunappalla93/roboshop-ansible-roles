@@ -10,7 +10,9 @@
   - name: app-setup
     tags: 
       - deployment
-    ansible.builtin.import_role:
+    ansible.builtin.import_role: 
+    # import_role -> respects tags - if tags are applied, they wil be applied to all tasks 
+    # include_role -> does not respect tags - we need to apply individually to each task
       name: common
       tasks_from: nodejs-setup.yaml
     
