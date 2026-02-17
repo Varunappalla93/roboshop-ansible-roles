@@ -21,3 +21,6 @@
 # now it goes to common-tasks-main.yaml file and executes it,
 # now it goes to roles-catalogue-tasks-main.yaml file and checks for import_role and executes common-tasks-app-setup.yaml as given,
 # also take username, password and other related {{ HOST }} names from directory named group_vars and file name all.yaml file.
+
+
+# handlers - they are notifiers , i.e.you can call task-b when task-a changes, eg: when configuration chnges, you can restart the application.
