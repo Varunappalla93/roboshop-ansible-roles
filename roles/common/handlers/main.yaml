@@ -1,0 +1,6 @@
+# Day 28
+
+- name: restart "{{ component }}"
+  ansible.builtin.service:
+    name: "{{ component }}"
+    state: restarted
