@@ -27,3 +27,5 @@
 
 # handlers - they are notifiers , i.e.you can call task-b when task-a changes, eg: when configuration chnges, you can restart the application
 # using handlers.
+
+# tags - to run specific tags inside playbook, tag and call it.
