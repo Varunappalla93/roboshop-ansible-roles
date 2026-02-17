@@ -25,4 +25,5 @@
 # to run all logs in background using nohup and & and save in var/log/ansible.log file
 # nohup ansible-playbook -e component=catalogue roboshop.yaml  &>/var/log/ansible.log &
 
-# handlers - they are notifiers , i.e.you can call task-b when task-a changes, eg: when configuration chnges, you can restart the application.
+# handlers - they are notifiers , i.e.you can call task-b when task-a changes, eg: when configuration chnges, you can restart the application
+# using handlers.
