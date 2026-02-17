@@ -1,11 +1,15 @@
 # Day 27
 
   - name: app-setup
+    tags:
+      - deployment
     ansible.builtin.import_role:
       name: common
       tasks_from: app-setup.yaml
 
   - name: app-setup
+    tags: 
+      - deployment
     ansible.builtin.import_role:
       name: common
       tasks_from: nodejs-setup.yaml
@@ -42,6 +46,8 @@
 
 
   - name: start catalogue
+    tags: 
+      - deployment
     ansible.builtin.service:
       name: catalogue
       state: restarted

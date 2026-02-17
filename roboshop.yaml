@@ -29,3 +29,4 @@
 # using handlers.
 
 # tags - to run specific tags inside playbook, tag and call it.
+# eg: ansible-playbook -e component=catalogue -t deployment roboshop.yaml
