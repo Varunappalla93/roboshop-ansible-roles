@@ -1,4 +1,4 @@
-# Day 27
+# Day 27 and 28
 
 - name: copy {{ component }} service
   ansible.builtin.template:
