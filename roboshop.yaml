@@ -22,5 +22,7 @@
 # now it goes to roles-catalogue-tasks-main.yaml file and checks for import_role and executes common-tasks-app-setup.yaml as given,
 # also take username, password and other related {{ HOST }} names from directory named group_vars and file name all.yaml file.
 
+# to run all logs in background and save in var/log/ansible.log file
+# nohup ansible-playbook -e component=catalogue roboshop.yaml  &>/var/log/ansible.log &
 
 # handlers - they are notifiers , i.e.you can call task-b when task-a changes, eg: when configuration chnges, you can restart the application.
