@@ -35,6 +35,7 @@
     path: /etc/nginx/nginx.conf
 
 - name: copy nginx.conf
+  throttle: 2   # restart 2 servers first, then 2 again etc
   ansible.builtin.template:
     src: nginx.conf.j2
     dest: /etc/nginx/nginx.conf

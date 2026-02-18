@@ -60,7 +60,9 @@
 
 # ansible-playbook -e component=mysql roboshop.yaml , if password is stored in vault_password_file= ~/.ansible/.mysql_vault
 
+# AWS platform - SSM parameter store or Secrets manager
 # eg to get mysql password from ssm parameter store or secret manager:
 # ansible-playbook -e component=mysql roboshop.yaml
 
 
+# Parallel execution - using forks/serial/throttle
