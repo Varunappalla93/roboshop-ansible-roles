@@ -1,0 +1,11 @@
+# Day 29
+
+# VAULT PASSWORD
+
+$ANSIBLE_VAULT;1;1; AES256 ueghuiehfuhuhAGETB#%*&@%#*&%EB&*TDVGHVD&*TBDBVHJSVHDVSH
+ueghuiehfuhuhAGETB#%*&@%#*&%EB&*TDVGHVD&*TBDBVHJSVHDVSH
+ueghuiehfuhuhAGETB#%*&@%#*&%EB&*TDVGHVD&*TBDBVHJSVHDVSH
+ueghuiehfuhuhAGETB#%*&@%#*&%EB&*TDVGHVD&*TBDBVHJSVHDVSH
+
+# eg:
+# ansible-playbook -e component=mysql roboshop.yaml --ask-vault-password

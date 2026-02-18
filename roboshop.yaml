@@ -46,3 +46,13 @@
 
 # eg:
 # ansible-playbook -i frontend.aws_ec2.yaml -e component=frontend roboshop.yaml
+
+# Vault:
+# ansible-vault create vault.yaml
+
+# ansible-vault view vault.yaml
+
+# ansible-vault edit vault.yaml
+
+# eg:
+# ansible-playbook -e component=mysql roboshop.yaml --ask-vault-password
