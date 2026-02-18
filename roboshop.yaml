@@ -65,4 +65,4 @@
 # ansible-playbook -e component=mysql roboshop.yaml
 
 
-# Parallel execution - using forks/serial/throttle
+# Parallel execution - using forks/serial/throttle for controlling servers
