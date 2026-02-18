@@ -66,3 +66,8 @@
 
 
 # Parallel execution - using forks/serial/throttle for controlling servers
+
+# Ansible disadvantages: ansible does not have state, hence cannot be used as IaaC.
+# Good configuration management tool
+
+# Terraform - creating servers , ansible - connect to servers and configure them
