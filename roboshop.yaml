@@ -3,7 +3,7 @@
 - name: "configure {{ component }} server"
   hosts: "{{ component }}"
   become: yes
-  serial: 5  # run entire playbook first on 5 servers, then take next 3 servers
+  serial: 5  # run entire playbook first on 5 servers, then take next 3 servers etc
   roles:
     - "{{ component }}"
 
