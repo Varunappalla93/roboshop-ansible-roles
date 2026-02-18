@@ -2,10 +2,20 @@
 
 # VAULT PASSWORD
 
-$ANSIBLE_VAULT;1;1; AES256 ueghuiehfuhuhAGETB#%*&@%#*&%EB&*TDVGHVD&*TBDBVHJSVHDVSH
-ueghuiehfuhuhAGETB#%*&@%#*&%EB&*TDVGHVD&*TBDBVHJSVHDVSH
-ueghuiehfuhuhAGETB#%*&@%#*&%EB&*TDVGHVD&*TBDBVHJSVHDVSH
-ueghuiehfuhuhAGETB#%*&@%#*&%EB&*TDVGHVD&*TBDBVHJSVHDVSH
+# ansible-vault create vault.yaml - to set vault password
+# cat vault.yaml -  to see the encrypted password , copy and place it here
+
+
+# $ANSIBLE_VAULT;1;1; AES256 ueghuiehfuhuhAGETB#%*&@%#*&%EB&*TDVGHVD&*TBDBVHJSVHDVSH
+# ueghuiehfuhuhAGETB#%*&@%#*&%EB&*TDVGHVD&*TBDBVHJSVHDVSH
+# ueghuiehfuhuhAGETB#%*&@%#*&%EB&*TDVGHVD&*TBDBVHJSVHDVSH
+# ueghuiehfuhuhAGETB#%*&@%#*&%EB&*TDVGHVD&*TBDBVHJSVHDVSH
 
 # eg:
 # ansible-playbook -e component=mysql roboshop.yaml --ask-vault-password
+
+# get mysql password from Secret Manager from AWS
+# MYSQL_ROOT_PASSWORD: "{{ (lookup('amazon.aws.aws_secret', 'roboshop/dev/mysql_root_password', region='us-east-1') | from_json).MYSQL_ROOT_PASSWORD }}"
+
+# get mysql password from SSM Parameter store from AWS
+#"{{ lookup('amazon.aws.aws_ssm', '/roboshop/dev/mysql_root_password', region='us-east-1', decrypt=True) }}"
