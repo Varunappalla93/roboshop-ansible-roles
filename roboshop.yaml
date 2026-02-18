@@ -30,3 +30,7 @@
 
 # tags - to run specific tags inside playbook, tag and call it.
 # eg: ansible-playbook -e component=catalogue -t deployment roboshop.yaml
+
+
+# import role - tags applied will be applied to all tasks
+# include role - tags applied will not be applied to all tasks
