@@ -56,3 +56,5 @@
 
 # eg:
 # ansible-playbook -e component=mysql roboshop.yaml --ask-vault-password
+
+# ansible-playbook -e component=mysql roboshop.yaml , if password is stored in vault_password_file= ~/.ansible/.mysql_vault
