@@ -1,4 +1,4 @@
-# Day 27
+# Day 27, 28, 29
 
 - name: "configure {{ component }} server"
   hosts: "{{ component }}"
@@ -32,5 +32,17 @@
 # eg: ansible-playbook -e component=catalogue -t deployment roboshop.yaml
 
 
-# import role - tags applied will be applied to all tasks
-# include role - tags applied will not be applied to all tasks
+# import role - tags applied will be applied to all tasks, parses playbook before execution, it is static,
+# conditions applied will be applied to all tasks
+# loops are not applied
+
+# include role - tags applied will not be applied to all tasks, it is dynamic, it wil directly execute playbook
+# conditions  will not be cared
+# loops are applied
+
+# Dynamic Inventory - servers will be created and destroyed based on traffic, we cannot use static inventory file,
+# we need to dynamically query the instances, we can use dynamic inventory plugin from aws by passing region, instances name,
+# running state etc. 
+
+# eg:
+# ansible-playbook -i frontend.aws_ec2.yaml -e component=frontend roboshop.yaml
