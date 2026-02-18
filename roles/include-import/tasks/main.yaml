@@ -1,7 +1,11 @@
 # Day 29
 
 - name: call common role
-  ansible.builtin.import_role:
+  # ansible.builtin.import_role:
+   ansible.builtin.include_role:
     name: common
     tasks_from: includevsimport
-
+   when: os=='RedHat'
+   loop:
+    - QA1
+    - QA2
