@@ -2,8 +2,10 @@
 
 # VAULT PASSWORD
 
-# ansible-vault create vault.yaml - to set vault password
-# cat vault.yaml -  to see the encrypted password , copy and place it here
+# ansible-vault create group_vars/mysql/vault.yaml - to set vault password inside that file, add your MySQL password variable like this:
+# MYSQL_ROOT_PASSWORD: RoboShop@1
+
+# cat group_vars/mysql/vault.yaml -  to see the encrypted password , copy and place it here
 
 
 # $ANSIBLE_VAULT;1;1; AES256 ueghuiehfuhuhAGETB#%*&@%#*&%EB&*TDVGHVD&*TBDBVHJSVHDVSH
