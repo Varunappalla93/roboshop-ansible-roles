@@ -13,13 +13,21 @@
     name: common
     tasks_from: systemd-setup.yaml
 
-- name: install python dependencie
+
+- name: install python packaging and pip
+  ansible.builtin.dnf:
+    name:
+      - python3-packaging
+      - python3-pip
+    state: present
+
+- name: install python dependencies
   ansible.builtin.pip:
     name: "{{ item }}"
-    executable: pip3.9
+    executable: pip3.12
   loop:
-  - cryptography
-  - PyMySQL
+    - cryptography
+    - PyMySQL
 
 - name: import shipping data
   community.mysql.mysql_db:
