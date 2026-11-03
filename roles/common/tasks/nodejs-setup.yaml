@@ -1,13 +1,41 @@
-- name: enable nodejs 20
-  ansible.builtin.command: dnf module enable nodejs:20 -y
+# - name: enable nodejs 20
+#   ansible.builtin.command: dnf module enable nodejs:20 -y
 
-- name: install nodejs
-  ansible.builtin.dnf:
-    name: nodejs
-    state: present
+# - name: install nodejs
+#   ansible.builtin.dnf:
+#     name: nodejs
+#     state: present
+
+# - name: install dependencies
+#   tags: 
+#   - deployment
+#   community.general.npm:
+#     path: /app
+
+
+- name: download nodejs 20
+  ansible.builtin.get_url:
+    url: https://nodejs.org/dist/v20.20.2/node-v20.20.2-linux-x64.tar.xz
+    dest: /tmp/node-v20.20.2-linux-x64.tar.xz
+
+- name: extract nodejs
+  ansible.builtin.unarchive:
+    src: /tmp/node-v20.20.2-linux-x64.tar.xz
+    dest: /opt/
+    remote_src: yes
+    creates: /opt/node-v20.20.2-linux-x64
+
+- name: configure nodejs path
+  ansible.builtin.copy:
+    dest: /etc/profile.d/nodejs.sh
+    content: |
+      export PATH=/opt/node-v20.20.2-linux-x64/bin:$PATH
+    mode: '0644'
 
 - name: install dependencies
-  tags: 
-  - deployment
+  tags:
+    - deployment
   community.general.npm:
     path: /app
+  environment:
+    PATH: "/opt/node-v20.20.2-linux-x64/bin:{{ ansible_env.PATH }}"
