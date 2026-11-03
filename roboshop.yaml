@@ -7,8 +7,8 @@
 
 
 # it wil take username and password from group_vars/all.yaml file and also
-# we replace component with our microservice name, hence we use below:
-# ansible-playbook -e component=mongodb roboshop.yaml
+# we replace component with our microservice name, hence we use below with tags if needed to run only tagged tasks:
+# ansible-playbook -e component=mongodb -t deployment roboshop.yaml
 
 # to mke output move to /var/log/ansible.log
 #nohup ansible-playbook -e component=mysql roboshop.yaml &>/var/log/ansible.log &
