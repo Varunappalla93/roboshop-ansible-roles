@@ -7,3 +7,25 @@ Ansible Roles:
   • files/: Stores static files copied to remote machines. 
   • templates/: Stores dynamic Jinja2 templates rendered before copying. 
   • meta/main.yml: Metadata including author information and role dependencies.
+
+ansible configuration path preference can be changed in 4 types:
+ansible --version to check ansible default path, i.e. /etc/ansible/ansible.cfg
+
+1.ANSIBLE_CONFIG
+2.PWD ansible.cfg
+3.user home directory .ansible.cfg
+4./etc/ansible.cfg
+
+now in ansible.cfg file we already gave inventory file, hence we can close ansible-roles-repo and give ansible-playbook main.yaml
+to execute tasks from demo/tasks folder.
+
+Eg of Roles Execution:
+first it executes roboshop.yaml, then checks for main in catalogue/meta/main.yaml file, and if it has any dependencies with common role 
+which will be defined in meta/main.yaml file ,it will come and execute common/tasks/dependent file.yaml file 
+and goes back to catalogue and then execute catalogue/tasks/main.yaml file which also 
+has common code imported via ansible.builtin.import_role.
+
+Same for other common code files also, eg: nodejs-setup, python-setup etc.
+
+Handlers - to restart services when any configuration changes are made.
+

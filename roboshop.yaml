@@ -1,0 +1,11 @@
+- name: "configure {{ component }} server "
+  hosts: "{{ component }}"
+  become: yes
+  roles:
+    - "{{ component }}"
+
+
+
+# it wil take username and password from group_vars/all.yaml file and also
+# we replace component with our microservice name, hence we use below:
+# ansible-playbook -e component=mongodb roboshop.yaml
