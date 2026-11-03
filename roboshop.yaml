@@ -9,3 +9,10 @@
 # it wil take username and password from group_vars/all.yaml file and also
 # we replace component with our microservice name, hence we use below:
 # ansible-playbook -e component=mongodb roboshop.yaml
+
+# to mke output move to /var/log/ansible.log
+#nohup ansible-playbook -e component=mysql roboshop.yaml &>/var/log/ansible.log &
+
+# check logs:
+# tail -f nohup.out and 
+# sudo less var/log/ansible.log
