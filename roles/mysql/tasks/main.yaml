@@ -1,3 +1,14 @@
+- name: Download MySQL repository RPM
+  ansible.builtin.get_url:
+  url: https://repo.mysql.com/mysql84-community-release-el10.rpm
+  dest: /tmp/mysql84-community-release-el10.rpm
+  mode: '0644'
+
+- name: Install MySQL repository
+  ansible.builtin.dnf:
+  name: /tmp/mysql84-community-release-el10.rpm
+  state: present
+  
 - name: install MySQL server
   ansible.builtin.dnf:
     name: mysql-server
