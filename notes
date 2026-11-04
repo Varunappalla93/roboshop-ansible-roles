@@ -29,3 +29,7 @@ Same for other common code files also, eg: nodejs-setup, python-setup etc.
 
 Handlers - to restart services when any configuration changes are made.
 
+import role respects the tags, if you apply tags to import_role those will be applied automatically to all tasks inside that role,
+
+include role does not respect tags, hence those will not be applied automatically to all tasks inside that role.
+
